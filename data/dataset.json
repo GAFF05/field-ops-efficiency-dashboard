@@ -7,346 +7,371 @@
   "tecnicos": [
     {
       "id": "t1",
-      "nombre": "Bárbara Prat Asensio"
+      "nombre": "Lupe Báez Plaza"
     },
     {
       "id": "t2",
-      "nombre": "Segismundo Burgos Pavón"
+      "nombre": "Graciano Bou Carbó"
     },
     {
       "id": "t3",
-      "nombre": "Amparo Vera-Garmendia"
+      "nombre": "Calixto Bejarano López"
     },
     {
       "id": "t4",
-      "nombre": "Armando Roura Ripoll"
+      "nombre": "Juan Francisco Ortiz Sarabia"
     },
     {
       "id": "t5",
-      "nombre": "Dionisio Botella Rodriguez"
+      "nombre": "Berta Ibáñez Gutierrez"
     },
     {
       "id": "t6",
-      "nombre": "Severiano Casals Godoy"
+      "nombre": "Isaura Frías"
     }
   ],
   "registros": [
     {
-      "id": "7e401480",
-      "nombre_proyecto": "Hnos Ayala S.L.N.E – Los Olivos",
-      "categoria": "Cambio de Válvulas",
-      "tecnico_id": "t3",
-      "creado_en": "2026-07-14",
+      "id": "89f48a5c",
+      "nombre_proyecto": "Inmobiliaria Monreal S.L.L. – Chorrillos",
+      "categoria": "Mantenimiento Preventivo",
+      "tecnico_id": "t2",
+      "creado_en": "2026-06-29",
       "estado": "completado",
       "atrasado": false,
-      "cumplimiento_pct": 98
+      "cumplimiento_pct": 95
     },
     {
-      "id": "9851f3d3",
-      "nombre_proyecto": "Grupo Manjón S.Com. – Chorrillos",
-      "categoria": "Mantenimiento Preventivo",
-      "tecnico_id": "t5",
-      "creado_en": "2026-07-21",
-      "estado": "activo",
-      "atrasado": true,
-      "cumplimiento_pct": 79
-    },
-    {
-      "id": "fe6abe0a",
-      "nombre_proyecto": "Inversiones QJEH S.Com. – San Miguel",
-      "categoria": "Mantenimiento Preventivo",
+      "id": "5889824d",
+      "nombre_proyecto": "Compañía Hoyos S.Com. – San Borja",
+      "categoria": "Cambio de Válvulas",
       "tecnico_id": "t4",
-      "creado_en": "2026-07-25",
-      "estado": "activo",
+      "creado_en": "2026-06-28",
+      "estado": "cancelado",
       "atrasado": false,
-      "cumplimiento_pct": 87
+      "cumplimiento_pct": 90
     },
     {
-      "id": "18872bfc",
-      "nombre_proyecto": "Comercial KJWQ S.Coop. – Ate",
-      "categoria": "Habilitación de Manifolds",
+      "id": "7b995b4e",
+      "nombre_proyecto": "Inversiones del Levante S.L.N.E – Ate",
+      "categoria": "Mantenimiento Preventivo",
       "tecnico_id": "t1",
-      "creado_en": "2026-07-14",
+      "creado_en": "2026-06-30",
       "estado": "activo",
       "atrasado": false,
-      "cumplimiento_pct": 68
+      "cumplimiento_pct": 80
     },
     {
-      "id": "f64e7eb1",
-      "nombre_proyecto": "Porfirio Marí Hurtado S.L. – Surco",
-      "categoria": "Habilitación de Manifolds",
-      "tecnico_id": "t2",
-      "creado_en": "2026-07-25",
-      "estado": "activo",
+      "id": "6c7108e2",
+      "nombre_proyecto": "Inversiones UC S.Com. – San Miguel",
+      "categoria": "Mantenimiento Preventivo",
+      "tecnico_id": "t3",
+      "creado_en": "2026-07-28",
+      "estado": "completado",
       "atrasado": false,
-      "cumplimiento_pct": 71
+      "cumplimiento_pct": 96
     },
     {
-      "id": "cf9b1ab6",
-      "nombre_proyecto": "Compañía Inteligentes S.Coop. – San Miguel",
-      "categoria": "Habilitación de Manifolds",
-      "tecnico_id": "t1",
-      "creado_en": "2026-07-29",
-      "estado": "activo",
-      "atrasado": true,
-      "cumplimiento_pct": 70
-    },
-    {
-      "id": "1093f928",
-      "nombre_proyecto": "Sanchez y asociados S.Coop. – San Miguel",
+      "id": "72189a7d",
+      "nombre_proyecto": "Minería SB S.Coop. – La Molina",
       "categoria": "Inspecciones",
-      "tecnico_id": "t2",
-      "creado_en": "2026-07-23",
-      "estado": "en_revision",
+      "tecnico_id": "t6",
+      "creado_en": "2026-07-22",
+      "estado": "completado",
       "atrasado": false,
-      "cumplimiento_pct": 78
+      "cumplimiento_pct": 99
     },
     {
-      "id": "d9fcde65",
-      "nombre_proyecto": "Consultoría VNHZ S.A. – San Miguel",
+      "id": "2134e54e",
+      "nombre_proyecto": "Comercial LTJ S.Com. – La Molina",
       "categoria": "Emisiones Acústicas",
       "tecnico_id": "t4",
+      "creado_en": "2026-07-23",
+      "estado": "completado",
+      "atrasado": false,
+      "cumplimiento_pct": 94
+    },
+    {
+      "id": "6821d7f2",
+      "nombre_proyecto": "Acedo y Isern S.Coop. – San Borja",
+      "categoria": "Rotación de Tanque",
+      "tecnico_id": "t5",
+      "creado_en": "2026-08-03",
+      "estado": "completado",
+      "atrasado": false,
+      "cumplimiento_pct": 94
+    },
+    {
+      "id": "e1ed168a",
+      "nombre_proyecto": "Colom y Gálvez S.C.P – San Isidro",
+      "categoria": "Rotación de Tanque",
+      "tecnico_id": "t2",
       "creado_en": "2026-07-04",
+      "estado": "completado",
+      "atrasado": false,
+      "cumplimiento_pct": 94
+    },
+    {
+      "id": "7d5b8488",
+      "nombre_proyecto": "Infraestructuras NQB S.L.N.E – Los Olivos",
+      "categoria": "Inspección para Cliente Directo",
+      "tecnico_id": "t1",
+      "creado_en": "2026-08-11",
       "estado": "completado",
       "atrasado": false,
       "cumplimiento_pct": 93
     },
     {
-      "id": "ac745f93",
-      "nombre_proyecto": "Logística KEE S.Coop. – Chorrillos",
-      "categoria": "Inspecciones",
-      "tecnico_id": "t3",
-      "creado_en": "2026-08-14",
+      "id": "ca7f9cdd",
+      "nombre_proyecto": "Casals y asociados S.L.U. – Ate",
+      "categoria": "Inspección para Cliente Directo",
+      "tecnico_id": "t5",
+      "creado_en": "2026-07-04",
       "estado": "activo",
-      "atrasado": false,
-      "cumplimiento_pct": 86
+      "atrasado": true,
+      "cumplimiento_pct": 91
     },
     {
-      "id": "9b4d8deb",
-      "nombre_proyecto": "Inmobiliaria KDM S.Com. – San Isidro",
+      "id": "2120a130",
+      "nombre_proyecto": "Fábrica Robledo & Asociados S.Com. – Los Olivos",
+      "categoria": "Habilitación de Manifolds",
+      "tecnico_id": "t2",
+      "creado_en": "2026-07-31",
+      "estado": "completado",
+      "atrasado": false,
+      "cumplimiento_pct": 95
+    },
+    {
+      "id": "82065fdc",
+      "nombre_proyecto": "Hermanos Benavides S.L.N.E – Los Olivos",
       "categoria": "Mantenimiento Preventivo",
-      "tecnico_id": "t4",
-      "creado_en": "2026-07-10",
-      "estado": "activo",
+      "tecnico_id": "t6",
+      "creado_en": "2026-06-28",
+      "estado": "en_revision",
       "atrasado": false,
       "cumplimiento_pct": 82
     },
     {
-      "id": "ce9d2f19",
-      "nombre_proyecto": "Lucas Polo Oliver S.A. – Los Olivos",
+      "id": "eae5efa8",
+      "nombre_proyecto": "Márquez y Téllez S.L. – Los Olivos",
       "categoria": "Mantenimiento Preventivo",
-      "tecnico_id": "t6",
-      "creado_en": "2026-07-24",
-      "estado": "completado",
+      "tecnico_id": "t4",
+      "creado_en": "2026-07-03",
+      "estado": "activo",
       "atrasado": false,
-      "cumplimiento_pct": 94
+      "cumplimiento_pct": 81
     },
     {
-      "id": "4b404d14",
-      "nombre_proyecto": "Pedro Diéguez Caro S.Coop. – Comas",
-      "categoria": "Inspecciones",
-      "tecnico_id": "t5",
-      "creado_en": "2026-08-09",
-      "estado": "completado",
-      "atrasado": false,
-      "cumplimiento_pct": 88
-    },
-    {
-      "id": "37b1d83f",
-      "nombre_proyecto": "Instalaciones Globales S.L. – Comas",
+      "id": "f11f624e",
+      "nombre_proyecto": "Familia Ruiz S.Coop. – La Molina",
       "categoria": "Inspección para Cliente Directo",
-      "tecnico_id": "t6",
-      "creado_en": "2026-06-22",
+      "tecnico_id": "t3",
+      "creado_en": "2026-07-07",
       "estado": "completado",
       "atrasado": false,
       "cumplimiento_pct": 100
     },
     {
-      "id": "1f9be779",
-      "nombre_proyecto": "Portillo y Valderrama S.A. – Surco",
-      "categoria": "Inspección para Cliente Directo",
-      "tecnico_id": "t3",
-      "creado_en": "2026-08-14",
-      "estado": "completado",
-      "atrasado": false,
-      "cumplimiento_pct": 97
-    },
-    {
-      "id": "d2a6fd81",
-      "nombre_proyecto": "Samu Lobo Cerro S.L.L. – Comas",
-      "categoria": "Mantenimiento Preventivo",
-      "tecnico_id": "t5",
-      "creado_en": "2026-06-22",
+      "id": "21238a30",
+      "nombre_proyecto": "Comercializadora SG S.Coop. – La Molina",
+      "categoria": "Instalación",
+      "tecnico_id": "t6",
+      "creado_en": "2026-07-19",
       "estado": "activo",
       "atrasado": false,
-      "cumplimiento_pct": 83
+      "cumplimiento_pct": 89
     },
     {
-      "id": "ce63fc37",
-      "nombre_proyecto": "Soluciones Palmer y asociados S.L.N.E – Chorrillos",
-      "categoria": "Mantenimiento Preventivo",
-      "tecnico_id": "t1",
-      "creado_en": "2026-07-14",
+      "id": "e714040f",
+      "nombre_proyecto": "Carranza y Cáceres S.Com. – La Molina",
+      "categoria": "Rotación de Tanque",
+      "tecnico_id": "t5",
+      "creado_en": "2026-06-20",
       "estado": "completado",
       "atrasado": false,
       "cumplimiento_pct": 100
     },
     {
-      "id": "0b1bf551",
-      "nombre_proyecto": "Compañía Echeverría S.A. – Miraflores",
-      "categoria": "Inspección para Cliente Directo",
-      "tecnico_id": "t3",
-      "creado_en": "2026-07-11",
-      "estado": "completado",
-      "atrasado": false,
-      "cumplimiento_pct": 94
-    },
-    {
-      "id": "c9b9cdb5",
-      "nombre_proyecto": "Alimentación del Sur S.L.L. – San Miguel",
+      "id": "bffd31e8",
+      "nombre_proyecto": "Lamas y asociados S.Coop. – Comas",
       "categoria": "Mantenimiento Preventivo",
-      "tecnico_id": "t2",
-      "creado_en": "2026-07-31",
-      "estado": "activo",
+      "tecnico_id": "t4",
+      "creado_en": "2026-06-28",
+      "estado": "en_revision",
       "atrasado": false,
       "cumplimiento_pct": 88
+    },
+    {
+      "id": "87a1c5ce",
+      "nombre_proyecto": "Quintana y Benavente S.A.U – San Isidro",
+      "categoria": "Rotación de Tanque",
+      "tecnico_id": "t5",
+      "creado_en": "2026-06-26",
+      "estado": "cancelado",
+      "atrasado": false,
+      "cumplimiento_pct": 84
     }
   ],
   "historial_estados": [
     {
-      "registro_id": "7e401480",
+      "registro_id": "89f48a5c",
       "estado": "activo",
-      "fecha": "2026-07-14"
+      "fecha": "2026-06-29"
     },
     {
-      "registro_id": "7e401480",
+      "registro_id": "89f48a5c",
       "estado": "completado",
-      "fecha": "2026-07-20"
+      "fecha": "2026-06-30"
     },
     {
-      "registro_id": "9851f3d3",
+      "registro_id": "5889824d",
       "estado": "activo",
-      "fecha": "2026-07-21"
+      "fecha": "2026-06-28"
     },
     {
-      "registro_id": "fe6abe0a",
+      "registro_id": "5889824d",
+      "estado": "cancelado",
+      "fecha": "2026-06-30"
+    },
+    {
+      "registro_id": "7b995b4e",
       "estado": "activo",
-      "fecha": "2026-07-25"
+      "fecha": "2026-06-30"
     },
     {
-      "registro_id": "18872bfc",
+      "registro_id": "6c7108e2",
       "estado": "activo",
-      "fecha": "2026-07-14"
+      "fecha": "2026-07-28"
     },
     {
-      "registro_id": "f64e7eb1",
+      "registro_id": "6c7108e2",
+      "estado": "completado",
+      "fecha": "2026-07-31"
+    },
+    {
+      "registro_id": "72189a7d",
       "estado": "activo",
-      "fecha": "2026-07-25"
+      "fecha": "2026-07-22"
     },
     {
-      "registro_id": "cf9b1ab6",
-      "estado": "activo",
-      "fecha": "2026-07-29"
+      "registro_id": "72189a7d",
+      "estado": "completado",
+      "fecha": "2026-07-27"
     },
     {
-      "registro_id": "1093f928",
+      "registro_id": "2134e54e",
       "estado": "activo",
       "fecha": "2026-07-23"
     },
     {
-      "registro_id": "1093f928",
-      "estado": "en_revision",
-      "fecha": "2026-07-26"
+      "registro_id": "2134e54e",
+      "estado": "completado",
+      "fecha": "2026-07-28"
     },
     {
-      "registro_id": "d9fcde65",
+      "registro_id": "6821d7f2",
+      "estado": "activo",
+      "fecha": "2026-08-03"
+    },
+    {
+      "registro_id": "6821d7f2",
+      "estado": "completado",
+      "fecha": "2026-08-07"
+    },
+    {
+      "registro_id": "e1ed168a",
       "estado": "activo",
       "fecha": "2026-07-04"
     },
     {
-      "registro_id": "d9fcde65",
+      "registro_id": "e1ed168a",
       "estado": "completado",
-      "fecha": "2026-07-08"
+      "fecha": "2026-07-09"
     },
     {
-      "registro_id": "ac745f93",
+      "registro_id": "7d5b8488",
       "estado": "activo",
-      "fecha": "2026-08-14"
+      "fecha": "2026-08-11"
     },
     {
-      "registro_id": "9b4d8deb",
-      "estado": "activo",
-      "fecha": "2026-07-10"
-    },
-    {
-      "registro_id": "ce9d2f19",
-      "estado": "activo",
-      "fecha": "2026-07-24"
-    },
-    {
-      "registro_id": "ce9d2f19",
-      "estado": "completado",
-      "fecha": "2026-07-29"
-    },
-    {
-      "registro_id": "4b404d14",
-      "estado": "activo",
-      "fecha": "2026-08-09"
-    },
-    {
-      "registro_id": "4b404d14",
+      "registro_id": "7d5b8488",
       "estado": "completado",
       "fecha": "2026-08-14"
     },
     {
-      "registro_id": "37b1d83f",
+      "registro_id": "ca7f9cdd",
       "estado": "activo",
-      "fecha": "2026-06-22"
+      "fecha": "2026-07-04"
     },
     {
-      "registro_id": "37b1d83f",
-      "estado": "completado",
-      "fecha": "2026-06-25"
-    },
-    {
-      "registro_id": "1f9be779",
-      "estado": "activo",
-      "fecha": "2026-08-14"
-    },
-    {
-      "registro_id": "1f9be779",
-      "estado": "completado",
-      "fecha": "2026-08-14"
-    },
-    {
-      "registro_id": "d2a6fd81",
-      "estado": "activo",
-      "fecha": "2026-06-22"
-    },
-    {
-      "registro_id": "ce63fc37",
-      "estado": "activo",
-      "fecha": "2026-07-14"
-    },
-    {
-      "registro_id": "ce63fc37",
-      "estado": "completado",
-      "fecha": "2026-07-16"
-    },
-    {
-      "registro_id": "0b1bf551",
-      "estado": "activo",
-      "fecha": "2026-07-11"
-    },
-    {
-      "registro_id": "0b1bf551",
-      "estado": "completado",
-      "fecha": "2026-07-13"
-    },
-    {
-      "registro_id": "c9b9cdb5",
+      "registro_id": "2120a130",
       "estado": "activo",
       "fecha": "2026-07-31"
+    },
+    {
+      "registro_id": "2120a130",
+      "estado": "completado",
+      "fecha": "2026-08-02"
+    },
+    {
+      "registro_id": "82065fdc",
+      "estado": "activo",
+      "fecha": "2026-06-28"
+    },
+    {
+      "registro_id": "82065fdc",
+      "estado": "en_revision",
+      "fecha": "2026-07-01"
+    },
+    {
+      "registro_id": "eae5efa8",
+      "estado": "activo",
+      "fecha": "2026-07-03"
+    },
+    {
+      "registro_id": "f11f624e",
+      "estado": "activo",
+      "fecha": "2026-07-07"
+    },
+    {
+      "registro_id": "f11f624e",
+      "estado": "completado",
+      "fecha": "2026-07-12"
+    },
+    {
+      "registro_id": "21238a30",
+      "estado": "activo",
+      "fecha": "2026-07-19"
+    },
+    {
+      "registro_id": "e714040f",
+      "estado": "activo",
+      "fecha": "2026-06-20"
+    },
+    {
+      "registro_id": "e714040f",
+      "estado": "completado",
+      "fecha": "2026-06-26"
+    },
+    {
+      "registro_id": "bffd31e8",
+      "estado": "activo",
+      "fecha": "2026-06-28"
+    },
+    {
+      "registro_id": "bffd31e8",
+      "estado": "en_revision",
+      "fecha": "2026-07-01"
+    },
+    {
+      "registro_id": "87a1c5ce",
+      "estado": "activo",
+      "fecha": "2026-06-26"
+    },
+    {
+      "registro_id": "87a1c5ce",
+      "estado": "cancelado",
+      "fecha": "2026-06-28"
     }
   ],
   "fotos_por_tecnico_semana": [
@@ -358,22 +383,22 @@
     {
       "tecnico_id": "t1",
       "semana": "2026-06-29",
-      "cantidad": 14
+      "cantidad": 11
     },
     {
       "tecnico_id": "t1",
       "semana": "2026-07-06",
-      "cantidad": 14
+      "cantidad": 7
     },
     {
       "tecnico_id": "t1",
       "semana": "2026-07-13",
-      "cantidad": 15
+      "cantidad": 10
     },
     {
       "tecnico_id": "t1",
       "semana": "2026-07-20",
-      "cantidad": 9
+      "cantidad": 7
     },
     {
       "tecnico_id": "t1",
@@ -383,212 +408,212 @@
     {
       "tecnico_id": "t1",
       "semana": "2026-08-03",
-      "cantidad": 16
+      "cantidad": 15
     },
     {
       "tecnico_id": "t1",
       "semana": "2026-08-10",
-      "cantidad": 16
+      "cantidad": 13
     },
     {
       "tecnico_id": "t2",
       "semana": "2026-06-22",
-      "cantidad": 16
-    },
-    {
-      "tecnico_id": "t2",
-      "semana": "2026-06-29",
-      "cantidad": 10
-    },
-    {
-      "tecnico_id": "t2",
-      "semana": "2026-07-06",
       "cantidad": 11
     },
     {
       "tecnico_id": "t2",
-      "semana": "2026-07-13",
+      "semana": "2026-06-29",
       "cantidad": 8
     },
     {
       "tecnico_id": "t2",
-      "semana": "2026-07-20",
-      "cantidad": 17
+      "semana": "2026-07-06",
+      "cantidad": 10
     },
     {
       "tecnico_id": "t2",
+      "semana": "2026-07-13",
+      "cantidad": 10
+    },
+    {
+      "tecnico_id": "t2",
+      "semana": "2026-07-20",
+      "cantidad": 20
+    },
+    {
+      "tecnico_id": "t2",
+      "semana": "2026-07-27",
+      "cantidad": 12
+    },
+    {
+      "tecnico_id": "t2",
+      "semana": "2026-08-03",
+      "cantidad": 8
+    },
+    {
+      "tecnico_id": "t2",
+      "semana": "2026-08-10",
+      "cantidad": 12
+    },
+    {
+      "tecnico_id": "t3",
+      "semana": "2026-06-22",
+      "cantidad": 12
+    },
+    {
+      "tecnico_id": "t3",
+      "semana": "2026-06-29",
+      "cantidad": 15
+    },
+    {
+      "tecnico_id": "t3",
+      "semana": "2026-07-06",
+      "cantidad": 15
+    },
+    {
+      "tecnico_id": "t3",
+      "semana": "2026-07-13",
+      "cantidad": 12
+    },
+    {
+      "tecnico_id": "t3",
+      "semana": "2026-07-20",
+      "cantidad": 10
+    },
+    {
+      "tecnico_id": "t3",
+      "semana": "2026-07-27",
+      "cantidad": 8
+    },
+    {
+      "tecnico_id": "t3",
+      "semana": "2026-08-03",
+      "cantidad": 4
+    },
+    {
+      "tecnico_id": "t3",
+      "semana": "2026-08-10",
+      "cantidad": 17
+    },
+    {
+      "tecnico_id": "t4",
+      "semana": "2026-06-22",
+      "cantidad": 7
+    },
+    {
+      "tecnico_id": "t4",
+      "semana": "2026-06-29",
+      "cantidad": 11
+    },
+    {
+      "tecnico_id": "t4",
+      "semana": "2026-07-06",
+      "cantidad": 10
+    },
+    {
+      "tecnico_id": "t4",
+      "semana": "2026-07-13",
+      "cantidad": 12
+    },
+    {
+      "tecnico_id": "t4",
+      "semana": "2026-07-20",
+      "cantidad": 11
+    },
+    {
+      "tecnico_id": "t4",
       "semana": "2026-07-27",
       "cantidad": 6
     },
     {
-      "tecnico_id": "t2",
+      "tecnico_id": "t4",
       "semana": "2026-08-03",
+      "cantidad": 12
+    },
+    {
+      "tecnico_id": "t4",
+      "semana": "2026-08-10",
       "cantidad": 10
     },
     {
-      "tecnico_id": "t2",
-      "semana": "2026-08-10",
-      "cantidad": 8
-    },
-    {
-      "tecnico_id": "t3",
+      "tecnico_id": "t5",
       "semana": "2026-06-22",
       "cantidad": 9
     },
     {
-      "tecnico_id": "t3",
+      "tecnico_id": "t5",
       "semana": "2026-06-29",
-      "cantidad": 13
+      "cantidad": 10
     },
     {
-      "tecnico_id": "t3",
+      "tecnico_id": "t5",
       "semana": "2026-07-06",
-      "cantidad": 8
-    },
-    {
-      "tecnico_id": "t3",
-      "semana": "2026-07-13",
-      "cantidad": 12
-    },
-    {
-      "tecnico_id": "t3",
-      "semana": "2026-07-20",
       "cantidad": 15
     },
     {
-      "tecnico_id": "t3",
-      "semana": "2026-07-27",
-      "cantidad": 20
+      "tecnico_id": "t5",
+      "semana": "2026-07-13",
+      "cantidad": 9
     },
     {
-      "tecnico_id": "t3",
-      "semana": "2026-08-03",
-      "cantidad": 10
-    },
-    {
-      "tecnico_id": "t3",
-      "semana": "2026-08-10",
-      "cantidad": 12
-    },
-    {
-      "tecnico_id": "t4",
-      "semana": "2026-06-22",
-      "cantidad": 10
-    },
-    {
-      "tecnico_id": "t4",
-      "semana": "2026-06-29",
+      "tecnico_id": "t5",
+      "semana": "2026-07-20",
       "cantidad": 11
     },
     {
-      "tecnico_id": "t4",
-      "semana": "2026-07-06",
-      "cantidad": 8
-    },
-    {
-      "tecnico_id": "t4",
-      "semana": "2026-07-13",
-      "cantidad": 10
-    },
-    {
-      "tecnico_id": "t4",
-      "semana": "2026-07-20",
-      "cantidad": 16
-    },
-    {
-      "tecnico_id": "t4",
+      "tecnico_id": "t5",
       "semana": "2026-07-27",
-      "cantidad": 10
+      "cantidad": 12
     },
     {
-      "tecnico_id": "t4",
+      "tecnico_id": "t5",
       "semana": "2026-08-03",
       "cantidad": 13
     },
     {
-      "tecnico_id": "t4",
-      "semana": "2026-08-10",
-      "cantidad": 12
-    },
-    {
       "tecnico_id": "t5",
-      "semana": "2026-06-22",
+      "semana": "2026-08-10",
       "cantidad": 8
-    },
-    {
-      "tecnico_id": "t5",
-      "semana": "2026-06-29",
-      "cantidad": 15
-    },
-    {
-      "tecnico_id": "t5",
-      "semana": "2026-07-06",
-      "cantidad": 16
-    },
-    {
-      "tecnico_id": "t5",
-      "semana": "2026-07-13",
-      "cantidad": 10
-    },
-    {
-      "tecnico_id": "t5",
-      "semana": "2026-07-20",
-      "cantidad": 10
-    },
-    {
-      "tecnico_id": "t5",
-      "semana": "2026-07-27",
-      "cantidad": 12
-    },
-    {
-      "tecnico_id": "t5",
-      "semana": "2026-08-03",
-      "cantidad": 3
-    },
-    {
-      "tecnico_id": "t5",
-      "semana": "2026-08-10",
-      "cantidad": 12
     },
     {
       "tecnico_id": "t6",
       "semana": "2026-06-22",
+      "cantidad": 15
+    },
+    {
+      "tecnico_id": "t6",
+      "semana": "2026-06-29",
       "cantidad": 9
     },
     {
       "tecnico_id": "t6",
-      "semana": "2026-06-29",
-      "cantidad": 12
-    },
-    {
-      "tecnico_id": "t6",
       "semana": "2026-07-06",
-      "cantidad": 15
+      "cantidad": 9
     },
     {
       "tecnico_id": "t6",
       "semana": "2026-07-13",
-      "cantidad": 16
+      "cantidad": 13
     },
     {
       "tecnico_id": "t6",
       "semana": "2026-07-20",
-      "cantidad": 11
+      "cantidad": 15
     },
     {
       "tecnico_id": "t6",
       "semana": "2026-07-27",
-      "cantidad": 8
+      "cantidad": 13
     },
     {
       "tecnico_id": "t6",
       "semana": "2026-08-03",
-      "cantidad": 10
+      "cantidad": 11
     },
     {
       "tecnico_id": "t6",
       "semana": "2026-08-10",
-      "cantidad": 8
+      "cantidad": 10
     }
   ]
 }
