@@ -1,0 +1,21 @@
+{
+  "generado_en": "EJEMPLO — no viene de producción, ver TODO.md/plan",
+  "total_tecnicos_activos": 6,
+  "fotos_por_tecnico_semana": {"promedio": 11.5, "desvio": 3.2},
+  "categorias": [
+    {"nombre": "Mantenimiento Preventivo", "proporcion_registros": 0.28, "cumplimiento_pct": 84},
+    {"nombre": "Mantenimiento Correctivo", "proporcion_registros": 0.06, "cumplimiento_pct": 91},
+    {"nombre": "Emisiones Acústicas", "proporcion_registros": 0.05, "cumplimiento_pct": 78},
+    {"nombre": "Inspecciones", "proporcion_registros": 0.14, "cumplimiento_pct": 88},
+    {"nombre": "Habilitación de Manifolds", "proporcion_registros": 0.07, "cumplimiento_pct": 72},
+    {"nombre": "Inspección para Cliente Directo", "proporcion_registros": 0.12, "cumplimiento_pct": 90},
+    {"nombre": "Atención de Emergencia", "proporcion_registros": 0.05, "cumplimiento_pct": 95},
+    {"nombre": "Inyecto Asistido", "proporcion_registros": 0.04, "cumplimiento_pct": 80},
+    {"nombre": "Rotación de Tanque", "proporcion_registros": 0.09, "cumplimiento_pct": 76},
+    {"nombre": "Cambio de Válvulas", "proporcion_registros": 0.06, "cumplimiento_pct": 85},
+    {"nombre": "Instalación", "proporcion_registros": 0.04, "cumplimiento_pct": 93}
+  ],
+  "pct_atrasados": 18,
+  "tiempo_ciclo_dias": {"promedio_dias": 4.2, "desvio_dias": 1.8, "muestras": 40},
+  "distribucion_estados": {"activo": 0.35, "en_revision": 0.08, "completado": 0.5, "cancelado": 0.07}
+}
