@@ -97,15 +97,44 @@ producción. La Etapa 2 (este generador) SÍ se automatiza con un GitHub
 Action programado (`.github/workflows/refrescar-dataset.yml`, Fase 6,
 **HECHO 2026-08-14**) que relee `parametros_agregados.json` y recommitea
 `dataset.json` — no toca la base real ni ninguna credencial, solo
-resamplea. Corre semanal (lunes 09:00 UTC) + botón manual
+resamplea. Diseñado para correr semanal (lunes 09:00 UTC) + botón manual
 (`workflow_dispatch`) desde la pestaña Actions. Nunca dispara por `push`
 (evita loop contra su propio commit). Usa `generador/parametros_agregados.json`
 si existe (el real) o si no `parametros_agregados_ejemplo.json` (lo que
 hay hoy) — el mensaje de commit automático distingue cuál de los dos usó,
 para no pisar la narrativa de "sin datos reales todavía" con una fecha
 que se ve falsamente fresca. Commitea como `github-actions[bot]`, nunca
-a nombre de Gabriel. Gratis: GitHub Actions no tiene costo en repos
-públicos.
+a nombre de Gabriel. Gratis en sí mismo: GitHub Actions no tiene costo en
+repos públicos (confirmado — uso medido de esta prueba: Gross $0.10,
+Billed $0.00, cubierto por el descuento gratuito).
+
+**Estado (2026-08-14): schedule PAUSADO.** Todos los intentos de correr
+el Action (manual, vía `gh workflow run`) fallan con "The job was not
+started because your account is locked due to a billing issue" — pese a
+que Settings > Billing de la cuenta de GitHub no muestra ninguna causa
+(sin tarjeta fallida, sin factura vencida, "You have not made any
+payments"). Se probó quitar una tarjeta vieja y esperar ~30 min por
+posible caché de propagación — sin cambio. Caso pendiente con soporte de
+GitHub (support.github.com). Mientras tanto, el bloque `schedule:` del
+workflow está comentado (queda solo `workflow_dispatch`, para no
+ensuciar la pestaña Actions con fallos semanales) y **la Etapa 2 se
+corre a mano** (ver más abajo) igual que antes de la Fase 6. Para
+reactivar el cron una vez resuelto con soporte: descomentar el bloque
+`schedule:` en `.github/workflows/refrescar-dataset.yml`.
+
+**Refresco manual (mientras el cron esté pausado), desde la raíz del
+repo:**
+```powershell
+cd generador
+pip install -r requirements.txt   # solo si falta Faker
+python generar_sintetico.py --params parametros_agregados_ejemplo.json --out ../data/dataset.json
+cd ..
+git add data/dataset.json
+git commit -m "Refresco manual del dataset sintético"
+git push
+```
+(Cambiar `--params` a `parametros_agregados.json` cuando exista el
+real.)
 
 ## Estructura del repo
 

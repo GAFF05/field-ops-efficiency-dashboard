@@ -9,8 +9,15 @@ name: Refrescar dataset sintético
 # propósito nunca un cron contra la base de producción.
 
 on:
-  schedule:
-    - cron: '0 9 * * 1' # todos los lunes 09:00 UTC
+  # schedule PAUSADO desde 2026-08-14: la cuenta de GitHub quedó con
+  # "account is locked due to a billing issue" (sin causa visible en
+  # Settings > Billing — pagos $0, sin tarjeta fallida, sin factura
+  # vencida; caso abierto con soporte de GitHub). Mientras se resuelve,
+  # solo queda disponible workflow_dispatch (botón manual) para no
+  # ensuciar la pestaña Actions con fallos semanales. Para reactivar el
+  # cron: descomentar el bloque `schedule:` de abajo. Ver CLAUDE.md.
+  # schedule:
+  #   - cron: '0 9 * * 1' # todos los lunes 09:00 UTC
   workflow_dispatch: {} # también corrible a mano desde la pestaña Actions
 
 permissions:
