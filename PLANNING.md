@@ -110,8 +110,10 @@ data/
   dataset.json                # lo único que lee el dashboard
 index.html                    # Fase 3, HECHO (2026-08-14)
 assets/dashboard.js            # Fase 3, HECHO
-README.md                     # Fase 4, pendiente — caso de estudio
+README.md                     # Fase 4, HECHO (2026-08-14)
 ```
+
+**GitHub Pages: activado y verificado** — https://gaff05.github.io/field-ops-efficiency-dashboard/
 
 ## Pendiente (no implementado todavía)
 
@@ -119,8 +121,12 @@ README.md                     # Fase 4, pendiente — caso de estudio
   patrón visual que `supervisor.html` en la app real (paleta ya validada
   contra daltonismo, mark specs). Probado con Playwright contra un server
   local — stats, gráficos y filtro interactivo por técnico funcionando.
-- Fase 4: `README.md` tipo caso de estudio.
+- ~~Fase 4: `README.md` tipo caso de estudio~~ — **HECHO (2026-08-14)**.
 - Fase 5: script/doc en el repo PRIVADO para sembrar la app real local con
   este mismo `dataset.json`, para demos en entrevistas.
 - Fase 6 (opcional): automatizar la Etapa 2 vía GitHub Action.
-- Activar GitHub Pages — ya se puede hacer, `index.html` existe.
+
+**A partir de acá (Fase 5 en adelante), el trabajo de este repo se retoma
+en una sesión NUEVA de Claude Code, rooteada en esta carpeta — no en la
+sesión de `NC-Informes` que armó todo lo de arriba (Fases 0-4). Ver el
+historial de commits/este documento para todo el contexto necesario.**
