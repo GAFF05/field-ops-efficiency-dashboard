@@ -58,7 +58,7 @@ cada actualización pasa por revisión humana antes de publicarse, y la app
 real nunca queda con una conexión permanente hacia afuera. El detalle
 completo de cada decisión (por qué este stack, por qué manual, qué pasa
 si dejo la empresa, cómo se generan los ciclos de vida de los registros
-sintéticos) está en **[PLANNING.md](PLANNING.md)**.
+sintéticos) está en **[CLAUDE.md](CLAUDE.md)**.
 
 ## Cómo confío en que esto es creíble sin mostrar datos reales
 
@@ -81,7 +81,7 @@ sembrada con este mismo dataset sintético) en una entrevista.
 
 ```bash
 # Regenerar el dataset sintético (con los parámetros de ejemplo, mientras
-# no haya suficiente historial real — ver PLANNING.md):
+# no haya suficiente historial real — ver CLAUDE.md):
 pip install -r generador/requirements.txt
 python generador/generar_sintetico.py \
   --params generador/parametros_agregados_ejemplo.json \

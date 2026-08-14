@@ -1,5 +1,5 @@
 // Dashboard estático — sin backend, sin build step (mismo criterio que la
-// app real de la que nace este caso de estudio, ver PLANNING.md). Lee
+// app real de la que nace este caso de estudio, ver CLAUDE.md). Lee
 // data/dataset.json una vez al cargar y arma todo client-side.
 //
 // Paleta y mark specs: copiados tal cual de static/js/supervisor.js en el
