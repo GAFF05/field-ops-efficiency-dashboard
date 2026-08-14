@@ -1,0 +1,67 @@
+name: Refrescar dataset sintético
+
+# Fase 6 del plan (ver CLAUDE.md): automatiza SOLO la Etapa 2 (el
+# generador sintético). No toca producción ni ninguna credencial — relee
+# generador/parametros_agregados.json (el real, si ya existe) o
+# generador/parametros_agregados_ejemplo.json (mientras no exista) y
+# resamplea data/dataset.json. La Etapa 1 (agregados reales) sigue siendo
+# 100% manual, corrida a mano por Gabriel en el repo privado — a
+# propósito nunca un cron contra la base de producción.
+
+on:
+  schedule:
+    - cron: '0 9 * * 1' # todos los lunes 09:00 UTC
+  workflow_dispatch: {} # también corrible a mano desde la pestaña Actions
+
+permissions:
+  contents: write
+
+jobs:
+  refrescar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Instalar dependencias
+        run: pip install -r generador/requirements.txt
+
+      - name: Elegir archivo de parámetros
+        id: params
+        run: |
+          if [ -f generador/parametros_agregados.json ]; then
+            echo "path=generador/parametros_agregados.json" >> "$GITHUB_OUTPUT"
+            echo "es_real=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "path=generador/parametros_agregados_ejemplo.json" >> "$GITHUB_OUTPUT"
+            echo "es_real=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Generar dataset sintético
+        run: |
+          python generador/generar_sintetico.py \
+            --params "${{ steps.params.outputs.path }}" \
+            --out data/dataset.json
+
+      - name: Commitear y pushear si hubo cambios
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          if git diff --quiet -- data/dataset.json; then
+            echo "Sin cambios en data/dataset.json, nada que commitear."
+            exit 0
+          fi
+
+          if [ "${{ steps.params.outputs.es_real }}" = "true" ]; then
+            titulo="Resampleo automático del dataset sintético (parámetros reales)"
+          else
+            titulo="Resampleo automático del dataset sintético (placeholder de ejemplo — todavía sin parámetros reales)"
+          fi
+
+          git add data/dataset.json
+          git commit -m "$titulo" -m "Automatizado (Fase 6, cron semanal). Etapa 2 solamente: no hay lectura de producción ni datos reales nuevos detrás de este commit — ver CLAUDE.md."
+          git push

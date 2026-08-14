@@ -93,15 +93,25 @@ también con esa señal.
 ## Automatización
 
 La Etapa 1 (agregados reales) es 100% manual — nunca un cron contra
-producción. La Etapa 2 (este generador) SÍ puede automatizarse con un
-GitHub Action programado que relea `parametros_agregados.json` y
-recommitee un `dataset.json` nuevo — no toca la base real ni ninguna
-credencial, solo resamplea. Queda como posible mejora futura, no
-implementada todavía.
+producción. La Etapa 2 (este generador) SÍ se automatiza con un GitHub
+Action programado (`.github/workflows/refrescar-dataset.yml`, Fase 6,
+**HECHO 2026-08-14**) que relee `parametros_agregados.json` y recommitea
+`dataset.json` — no toca la base real ni ninguna credencial, solo
+resamplea. Corre semanal (lunes 09:00 UTC) + botón manual
+(`workflow_dispatch`) desde la pestaña Actions. Nunca dispara por `push`
+(evita loop contra su propio commit). Usa `generador/parametros_agregados.json`
+si existe (el real) o si no `parametros_agregados_ejemplo.json` (lo que
+hay hoy) — el mensaje de commit automático distingue cuál de los dos usó,
+para no pisar la narrativa de "sin datos reales todavía" con una fecha
+que se ve falsamente fresca. Commitea como `github-actions[bot]`, nunca
+a nombre de Gabriel. Gratis: GitHub Actions no tiene costo en repos
+públicos.
 
 ## Estructura del repo
 
 ```
+.github/workflows/
+  refrescar-dataset.yml       # Fase 6, HECHO — cron semanal, corre la Etapa 2
 generador/
   generar_sintetico.py       # Etapa 2 — lee parámetros, escribe data/dataset.json
   parametros_agregados_ejemplo.json  # placeholder mientras no haya suficiente historial real
@@ -144,7 +154,14 @@ README.md                     # Fase 4, HECHO (2026-08-14)
     trae credenciales).
   - Documentado en el README de `NC-Informes`, sección "🎤 Demo con datos
     sintéticos (para entrevistas)".
-- Fase 6 (opcional): automatizar la Etapa 2 vía GitHub Action.
+- ~~Fase 6 (opcional): automatizar la Etapa 2 vía GitHub Action.~~ —
+  **HECHO (2026-08-14)**, ver sección "Automatización" arriba.
+
+Sin pendientes nuevos por ahora — las 6 fases del plan original están
+hechas. Próximo hito natural: cuando haya suficiente historial real en
+producción, correr la Etapa 1 de verdad en el repo privado y agregar
+`generador/parametros_agregados.json` (el Action lo detecta solo, sin
+tocar el workflow).
 
 **El trabajo de este repo se retoma en una sesión de Claude Code rooteada
 en esta carpeta. Cuando haga falta algo del lado de `NC-Informes` (repo
