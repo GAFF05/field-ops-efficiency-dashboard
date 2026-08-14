@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Dashboard de eficiencia operativa — datos sintéticos</title>
+<meta name="description" content="Caso de estudio: dashboard de eficiencia operativa sobre datos 100% sintéticos, generados a partir de patrones agregados de un sistema real de registro fotográfico de campo."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
+<style>
+/* Mismo sistema visual que supervisor.html (la app real de la que nace este
+   caso de estudio) — paleta oscura, misma tipografía, mismos mark specs de
+   Chart.js. Reusado a propósito, no reinventado: ver PLANNING.md. */
+:root{--bg:#0d0f14;--surf:#161920;--border:#272b35;--accent:#e8a020;--text:#e4e6ed;--muted:#6b7280;--success:#22c55e;--danger:#ef4444;--info:#3b82f6;--warn:#f59e0b;--r:10px}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:'IBM Plex Sans',sans-serif;min-height:100vh;padding-bottom:60px}
+header{background:var(--surf);border-bottom:1px solid var(--border);padding:20px;position:sticky;top:0;z-index:10}
+header h1{font-size:17px;font-weight:600}
+header p{font-size:12px;color:var(--muted);margin-top:4px;max-width:720px;line-height:1.5}
+header a{color:var(--accent)}
+main{max-width:960px;margin:0 auto;padding:20px}
+.aviso{background:#1a1608;border:1px solid #4a3a10;border-radius:var(--r);padding:14px 18px;margin-bottom:20px;font-size:12px;color:var(--text);line-height:1.6}
+.aviso b{color:var(--warn)}
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:16px}
+.stat-card{background:var(--surf);border:1px solid var(--border);border-radius:var(--r);padding:16px;text-align:center}
+.stat-num{font-size:28px;font-weight:600;font-family:'IBM Plex Mono',monospace;color:var(--accent)}
+.stat-label{font-size:11px;color:var(--muted);margin-top:4px}
+.card{background:var(--surf);border:1px solid var(--border);border-radius:var(--r);padding:18px;margin-bottom:16px}
+.card-title{font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:14px;font-family:'IBM Plex Mono',monospace}
+.chart-wrap{position:relative;height:280px}
+.chip-filter{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+.chip{background:var(--bg);border:1px solid var(--border);color:var(--muted);border-radius:20px;padding:4px 12px;font-size:11px;cursor:pointer;transition:all .15s;display:inline-flex;align-items:center}
+.chip.active{border-color:var(--accent);color:var(--text)}
+footer{max-width:960px;margin:20px auto 0;padding:0 20px;font-size:11px;color:var(--muted);line-height:1.6}
+footer a{color:var(--muted)}
+table{width:100%;border-collapse:collapse;font-size:12px}
+th,td{text-align:left;padding:6px 8px;border-bottom:1px solid var(--border)}
+th{color:var(--muted);font-weight:600;font-size:10px;text-transform:uppercase;letter-spacing:.05em}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>📊 Dashboard de eficiencia operativa</h1>
+  <p>Caso de estudio — <b>todos los datos de esta página son sintéticos</b>,
+  generados a partir de patrones agregados (nunca filas) de un sistema real
+  de registro fotográfico de campo. Ver <a href="PLANNING.md">PLANNING.md</a>
+  para la metodología completa.</p>
+</header>
+
+<main>
+  <div class="aviso" id="aviso-fecha">Cargando…</div>
+
+  <div class="stats-grid" id="stats-grid"></div>
+
+  <div class="card">
+    <div class="card-title" id="fotos-semana-titulo">📷 Fotos por técnico — últimas 8 semanas</div>
+    <div class="chip-filter" id="fotos-semana-filtro"></div>
+    <div class="chart-wrap"><canvas id="chart-fotos-semana"></canvas></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">✅ Cumplimiento de fotos requeridas por categoría</div>
+    <div class="chart-wrap tall" style="height:340px"><canvas id="chart-cumplimiento-cat"></canvas></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">📋 Registros del período (muestra)</div>
+    <div style="overflow-x:auto">
+      <table id="tabla-registros"><thead><tr>
+        <th>Proyecto</th><th>Categoría</th><th>Estado</th><th>Cumplimiento</th>
+      </tr></thead><tbody></tbody></table>
+    </div>
+  </div>
+</main>
+
+<footer>
+  Código completo (dashboard + generador de datos sintéticos) en
+  <a href="https://github.com/GAFF05/field-ops-efficiency-dashboard">este repositorio</a>.
+  Sin backend — esta página lee <code>data/dataset.json</code> directo en el navegador.
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+<script src="assets/dashboard.js"></script>
+</body>
+</html>
