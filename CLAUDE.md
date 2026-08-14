@@ -108,19 +108,44 @@ a nombre de Gabriel. Gratis en sí mismo: GitHub Actions no tiene costo en
 repos públicos (confirmado — uso medido de esta prueba: Gross $0.10,
 Billed $0.00, cubierto por el descuento gratuito).
 
-**Estado (2026-08-14): schedule PAUSADO.** Todos los intentos de correr
-el Action (manual, vía `gh workflow run`) fallan con "The job was not
-started because your account is locked due to a billing issue" — pese a
-que Settings > Billing de la cuenta de GitHub no muestra ninguna causa
-(sin tarjeta fallida, sin factura vencida, "You have not made any
-payments"). Se probó quitar una tarjeta vieja y esperar ~30 min por
-posible caché de propagación — sin cambio. Caso pendiente con soporte de
-GitHub (support.github.com). Mientras tanto, el bloque `schedule:` del
-workflow está comentado (queda solo `workflow_dispatch`, para no
-ensuciar la pestaña Actions con fallos semanales) y **la Etapa 2 se
-corre a mano** (ver más abajo) igual que antes de la Fase 6. Para
-reactivar el cron una vez resuelto con soporte: descomentar el bloque
-`schedule:` en `.github/workflows/refrescar-dataset.yml`.
+**Estado (2026-08-14): schedule PAUSADO, pendiente de resolver en otra
+PC.** Todos los intentos de correr el Action (manual, vía `gh workflow
+run`) fallan con "The job was not started because your account is
+locked due to a billing issue" — pese a que Settings > Billing de la
+cuenta de GitHub no muestra ninguna causa (sin tarjeta fallida, sin
+factura vencida, "You have not made any payments"). Se probó quitar una
+tarjeta vieja y esperar ~30 min por posible caché de propagación — sin
+cambio.
+
+**Hallazgo clave** (mensaje del propio flujo de soporte de GitHub al
+armar el ticket): el lock de cuenta solo se levanta automático cuando
+GitHub logra autorizar/cobrar exitosamente contra un método de pago
+válido — o sea, **haber sacado la tarjeta vieja sin cargar una nueva es
+probablemente la causa de que siga trabado**, no algo aparte. Nunca se
+llegó a mandar el ticket de soporte.
+
+**Próximo paso pendiente (retomar en la otra PC de Gabriel):**
+1. Billing & Licensing → Payment information en la cuenta `@GAFF05` →
+   agregar una tarjeta de crédito válida o PayPal (no prepaga, GitHub
+   las rechaza). Guardar dispara una autorización nueva.
+2. Esperar: si es solo un hold de autorización se destraba al toque; si
+   fue un pago rechazado, GitHub dice que puede tardar hasta 24h.
+3. Reintentar el Action (`gh workflow run refrescar-dataset.yml` o botón
+   "Run workflow" en la pestaña Actions).
+4. Si sigue igual después de eso, recién ahí mandar el ticket a
+   support.github.com (categoría "Autorización del método de pago" /
+   producto "GitHub Actions o Packages") — el texto ya está redactado
+   en el historial de esta conversación, incluye los 4 run IDs que
+   fallaron el 2026-08-14.
+5. Ojo: no es un tema de plata — Actions es gratis en repos públicos
+   (confirmado: uso medido de esa prueba, Gross $0.10, Billed $0.00).
+   La tarjeta es solo para que GitHub valide la cuenta.
+
+Mientras tanto, el bloque `schedule:` del workflow está comentado (queda
+solo `workflow_dispatch`, para no ensuciar la pestaña Actions con fallos
+semanales) y **la Etapa 2 se corre a mano** (ver más abajo) igual que
+antes de la Fase 6. Para reactivar el cron una vez resuelto: descomentar
+el bloque `schedule:` en `.github/workflows/refrescar-dataset.yml`.
 
 **Refresco manual (mientras el cron esté pausado), desde la raíz del
 repo:**
