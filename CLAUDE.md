@@ -122,11 +122,33 @@ README.md                     # Fase 4, HECHO (2026-08-14)
   contra daltonismo, mark specs). Probado con Playwright contra un server
   local — stats, gráficos y filtro interactivo por técnico funcionando.
 - ~~Fase 4: `README.md` tipo caso de estudio~~ — **HECHO (2026-08-14)**.
-- Fase 5: script/doc en el repo PRIVADO para sembrar la app real local con
-  este mismo `dataset.json`, para demos en entrevistas.
+- ~~Fase 5: script/doc en el repo PRIVADO para sembrar la app real local
+  con este mismo `dataset.json`, para demos en entrevistas.~~ — **HECHO
+  (2026-08-14)**, en `NC-Informes` (commit `d549c35`), coordinado por
+  relay manual entre esa sesión y esta (el usuario pasó mensajes entre
+  las dos terminales). Detalle relevante para quien retome esto:
+  - `scripts/sembrar_desde_dataset_publico.py` en `NC-Informes` lee
+    `../field-ops-efficiency-dashboard/data/dataset.json` (ruta relativa
+    entre las dos carpetas hermanas) y siembra una DB local aparte
+    (`northcompany_demo.db`, gitignoreada) — nunca `northcompany.db` ni
+    Postgres de producción (corta si detecta `DATABASE_URL` seteada).
+    Pide confirmación escribiendo "SEMBRAR" (`--yes` para saltarla).
+  - Como `cumplimiento_pct`/`atrasado` no son columnas reales (se
+    calculan en vivo), el script los reproduce generando un checklist
+    sintético de 10 ítems por registro y completando los que hagan falta
+    para el mismo %, más fechas corridas por offset (`hoy − periodo.hasta`)
+    para que los gráficos de "últimos N días" nunca queden vacíos sin
+    importar cuánto tiempo pase entre generar el dataset y hacer la demo.
+  - Logins de demo: `demo_supervisor` / `demo_admin` / `demo_t1..demo_tN`,
+    contraseña `Demo1234` (creados por el script — el dataset público no
+    trae credenciales).
+  - Documentado en el README de `NC-Informes`, sección "🎤 Demo con datos
+    sintéticos (para entrevistas)".
 - Fase 6 (opcional): automatizar la Etapa 2 vía GitHub Action.
 
-**A partir de acá (Fase 5 en adelante), el trabajo de este repo se retoma
-en una sesión NUEVA de Claude Code, rooteada en esta carpeta — no en la
-sesión de `NC-Informes` que armó todo lo de arriba (Fases 0-4). Ver el
-historial de commits/este documento para todo el contexto necesario.**
+**El trabajo de este repo se retoma en una sesión de Claude Code rooteada
+en esta carpeta. Cuando haga falta algo del lado de `NC-Informes` (repo
+privado, carpeta hermana), coordinar por relay manual: el usuario pasa
+mensajes entre las dos terminales — no hay canal en vivo entre sesiones
+de Claude Code ni memoria compartida entre ellas. Ver el historial de
+commits/este documento para todo el contexto necesario.**
