@@ -108,16 +108,19 @@ generador/
   requirements.txt
 data/
   dataset.json                # lo único que lee el dashboard
-index.html                    # Fase 3, pendiente
+index.html                    # Fase 3, HECHO (2026-08-14)
+assets/dashboard.js            # Fase 3, HECHO
 README.md                     # Fase 4, pendiente — caso de estudio
 ```
 
 ## Pendiente (no implementado todavía)
 
-- Fase 3: `index.html` con los gráficos (Chart.js, mismo patrón visual que
-  `supervisor.html` en la app real).
+- ~~Fase 3: `index.html` con los gráficos~~ — **HECHO (2026-08-14)**, mismo
+  patrón visual que `supervisor.html` en la app real (paleta ya validada
+  contra daltonismo, mark specs). Probado con Playwright contra un server
+  local — stats, gráficos y filtro interactivo por técnico funcionando.
 - Fase 4: `README.md` tipo caso de estudio.
 - Fase 5: script/doc en el repo PRIVADO para sembrar la app real local con
   este mismo `dataset.json`, para demos en entrevistas.
 - Fase 6 (opcional): automatizar la Etapa 2 vía GitHub Action.
-- Activar GitHub Pages una vez que `index.html` exista.
+- Activar GitHub Pages — ya se puede hacer, `index.html` existe.
